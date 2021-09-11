@@ -55,7 +55,7 @@ then
 
 	mysql --connect-expired-password -uroot  -e "status"
 
-	echo "安装完成"
+	echo -e "安装完成,数据库密码: \033[31m"$mysqlPWD"\033[0m"
 else
 	echo "状态异常，安装失败"
 fi
