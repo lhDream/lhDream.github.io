@@ -7,11 +7,12 @@ echo "--MySQL5.7安装--"
 
 echo "下载依赖环境"
 yum -y install wget
-wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm
+wget -i -c https://mirrors.cloud.tencent.com/mysql/downloads/MySQL-5.7/mysql-5.7.37-1.el6.x86_64.rpm-bundle.tar
+
+tar -xvf mysql-5.7.37-1.el6.x86_64.rpm-bundle.tar
 
 echo "开始安装"
-yum -y install mysql57-community-release-el7-10.noarch.rpm
-yum -y install mysql-community-server
+yum -y install ./mysql-community*.rpm
 
 echo "启动MySQL"
 systemctl start  mysqld.service
