@@ -12,6 +12,10 @@ wget https://mirrors.cloud.tencent.com/mysql/yum/mysql-5.7-community-el7-x86_64/
 wget https://mirrors.cloud.tencent.com/mysql/yum/mysql-5.7-community-el7-x86_64/mysql-community-common-5.7.37-1.el7.x86_64.rpm
 wget https://mirrors.cloud.tencent.com/mysql/yum/mysql-5.7-community-el7-x86_64/mysql-community-libs-5.7.37-1.el7.x86_64.rpm
 
+echo "清除mariadb-libs"
+
+yum -y remove mariadb-libs
+
 echo "开始安装"
 yum -y install ./mysql*.rpm
 
